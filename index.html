@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TempoLivre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="logo-icone" viewBox="0 0 240 240">
+      <g transform="translate(10,10)">
+        <circle cx="110" cy="110" r="100" style="fill:var(--teal)"/>
+        <circle cx="110" cy="110" r="80" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="4"/>
+        <line x1="110" y1="110" x2="110" y2="48" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+        <line x1="110" y1="110" x2="152" y2="134" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="110" cy="110" r="9" fill="#ffffff"/>
+        <circle cx="180" cy="180" r="40" style="fill:var(--coin);stroke:var(--bg);stroke-width:8"/>
+        <text x="180" y="191" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" style="fill:#5b2a00">R$</text>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topo">
+  <div class="miolo topo-grade">
+    <a class="marca" href="#conteudo" aria-label="TempoLivre, voltar ao início">
+      <svg class="marca-icone" aria-hidden="true"><use href="#logo-icone"/></svg>
+      <span class="marca-nome">Tempo<span class="marca-livre">Livre</span></span>
+    </a>
+    <nav class="menu" aria-label="Seções do site">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#banco">Banco de Talentos</a>
+      <a href="#comparacao">Comparação</a>
+      <a href="#investidores">Investidores</a>
+    </nav>
+    <a class="btn btn-primario btn-pequeno topo-cta" href="#cadastro">Cadastrar talento</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- Início -->
+  <section class="hero">
+    <div class="miolo hero-grade">
+      <div class="hero-texto">
+        <h1>Seu primeiro dinheiro com o que você já sabe.</h1>
+        <p class="lead">A TempoLivre liga quem sabe fazer um serviço a quem precisa dele, na mesma comunidade. O prestador só paga quando ganha.</p>
+        <div class="acoes">
+          <a class="btn btn-primario" href="#servicos">Ver serviços</a>
+          <a class="btn btn-contorno" href="#cadastro">Cadastrar meu talento</a>
+        </div>
+        <p class="aviso">Protótipo feito para a Feira de Ciências. Perfis, preços e avaliações são de exemplo.</p>
+      </div>
+
+      <aside class="recibo" aria-labelledby="recibo-titulo">
+        <div class="recibo-topo">
+          <svg class="recibo-icone" aria-hidden="true"><use href="#logo-icone"/></svg>
+          <h2 id="recibo-titulo" class="recibo-titulo">Comprovante de exemplo</h2>
+        </div>
+        <div class="campo">
+          <label for="hero-servico">Escolha um serviço</label>
+          <select id="hero-servico"></select>
+        </div>
+        <dl class="fechamento">
+          <div class="fila"><dt>Cliente paga</dt><dd id="r-cliente">R$ 0,00</dd></div>
+          <div class="fila"><dt>Comissão da TempoLivre (15%)</dt><dd id="r-comissao">R$ 0,00</dd></div>
+          <div class="fila fila-destaque"><dt>Prestador recebe (85%)</dt><dd id="r-prestador">R$ 0,00</dd></div>
+        </dl>
+        <div class="barra" role="img" aria-label="Divisão do valor: 85% para o prestador e 15% para a TempoLivre">
+          <span class="barra-prest" id="r-barra-prest"></span>
+          <span class="barra-com" id="r-barra-com"></span>
+        </div>
+        <div class="recibo-corte">
+          <p>O valor fica retido e só é liberado quando o cliente confirma que o serviço foi feito.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="bloco" id="como-funciona">
+    <div class="miolo">
+      <h2>Como funciona</h2>
+      <ol class="passos-lista">
+        <li>
+          <span class="passo-n" aria-hidden="true">1</span>
+          <div>
+            <h3>Cadastre seu talento</h3>
+            <p>Diga o que sabe fazer, quando está livre e quanto cobra. A verificação é simples e não custa nada.</p>
+          </div>
+        </li>
+        <li>
+          <span class="passo-n" aria-hidden="true">2</span>
+          <div>
+            <h3>O cliente escolhe e paga</h3>
+            <p>O preço aparece no catálogo, sem leilão de propostas. O pagamento fica retido até o serviço terminar.</p>
+          </div>
+        </li>
+        <li>
+          <span class="passo-n" aria-hidden="true">3</span>
+          <div>
+            <h3>Você conclui e recebe</h3>
+            <p>Quando o cliente confirma, a TempoLivre desconta 15% e libera o resto. Tudo fica registrado no seu Banco de Talentos.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="bloco" id="servicos">
+    <div class="miolo">
+      <h2>Serviços perto de você</h2>
+      <p class="intro">Estes são os serviços do começo. Cada preço mostra quanto fica para o prestador.</p>
+      <div class="filtros" role="group" aria-label="Filtrar por categoria">
+        <button class="chip" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" data-filtro="reforco" aria-pressed="false">Reforço escolar</button>
+        <button class="chip" type="button" data-filtro="video" aria-pressed="false">Edição de vídeo</button>
+        <button class="chip" type="button" data-filtro="slides" aria-pressed="false">Apresentações</button>
+      </div>
+      <p class="status" id="catalogo-status" aria-live="polite"></p>
+      <ul class="servicos" id="lista-servicos"></ul>
+    </div>
+  </section>
+
+  <!-- Cadastro -->
+  <section class="bloco" id="cadastro">
+    <div class="miolo duas-colunas">
+      <div>
+        <h2>Cadastre seu talento</h2>
+        <p class="intro">Leva um minuto. Use um apelido: nada do que você digita sai do seu navegador.</p>
+        <form id="form-talento" class="formulario" novalidate>
+          <div class="campo">
+            <label for="t-apelido">Seu apelido</label>
+            <input id="t-apelido" name="apelido" type="text" maxlength="20" autocomplete="off" placeholder="Ex.: Julia T.">
+          </div>
+          <div class="campo">
+            <label for="t-categoria">Categoria</label>
+            <select id="t-categoria" name="categoria">
+              <option value="reforco">Reforço escolar</option>
+              <option value="video">Edição de vídeo</option>
+              <option value="slides">Apresentações</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="t-titulo">O que você oferece</label>
+            <input id="t-titulo" name="titulo" type="text" maxlength="60" autocomplete="off" placeholder="Ex.: Aulas de inglês para iniciantes">
+          </div>
+          <div class="campo">
+            <label for="t-preco">Preço do serviço (R$)</label>
+            <input id="t-preco" name="preco" type="number" min="10" max="1000" step="5" value="80" inputmode="numeric">
+          </div>
+          <div class="campo">
+            <label for="t-horario">Quando você está livre</label>
+            <select id="t-horario" name="horario">
+              <option>Tardes</option>
+              <option>Noites</option>
+              <option>Fins de semana</option>
+            </select>
+          </div>
+          <p class="erro" id="t-erro" role="alert" hidden></p>
+          <button class="btn btn-primario" type="submit">Cadastrar talento</button>
+        </form>
+      </div>
+
+      <div class="lado">
+        <div class="previa" aria-live="polite">
+          <h3>Quanto fica para você</h3>
+          <p id="t-previa">Digite um preço para ver a divisão.</p>
+        </div>
+        <div class="sucesso" id="t-sucesso" role="status" hidden>
+          <h3>Talento cadastrado</h3>
+          <p id="t-sucesso-texto"></p>
+          <a class="btn btn-contorno btn-pequeno" href="#servicos">Ver no catálogo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banco de Talentos -->
+  <section class="bloco" id="banco">
+    <div class="miolo">
+      <h2>Banco de Talentos</h2>
+      <p class="intro">Cada serviço vira um registro: quanto o prestador recebeu, quanto gastou e quanto sobrou. Escolha um painel de exemplo ou contrate um serviço lá em cima para ver o registro aparecer.</p>
+
+      <div class="campo campo-estreito">
+        <label for="banco-prestador">Painel de</label>
+        <select id="banco-prestador"></select>
+      </div>
+
+      <div class="kpis" aria-live="polite">
+        <div class="kpi"><span class="kpi-rotulo">Recebido</span><strong id="k-recebido">R$ 0,00</strong></div>
+        <div class="kpi"><span class="kpi-rotulo">Custos</span><strong id="k-custos">R$ 0,00</strong></div>
+        <div class="kpi"><span class="kpi-rotulo">Renda líquida</span><strong id="k-liquido" class="kpi-destaque">R$ 0,00</strong></div>
+      </div>
+
+      <div class="duas-colunas duas-colunas-topo">
+        <div>
+          <h3>Para onde vai a renda líquida</h3>
+          <div class="campo">
+            <label for="a-guardar">Guardar: <output id="a-guardar-v">40%</output></label>
+            <input id="a-guardar" type="range" min="0" max="100" step="5" value="40">
+          </div>
+          <div class="campo">
+            <label for="a-reinvestir">Reinvestir no talento: <output id="a-reinvestir-v">30%</output></label>
+            <input id="a-reinvestir" type="range" min="0" max="100" step="5" value="30">
+          </div>
+          <div class="pilha" role="img" aria-label="Divisão da renda líquida entre guardar, reinvestir e livre">
+            <span class="pilha-seg pilha-guardar" id="p-guardar"></span>
+            <span class="pilha-seg pilha-reinvestir" id="p-reinvestir"></span>
+            <span class="pilha-seg pilha-livre" id="p-livre"></span>
+          </div>
+          <ul class="legenda legenda-coluna" id="a-legenda"></ul>
+        </div>
+
+        <div>
+          <h3>Registrar um custo</h3>
+          <form id="form-custo" class="formulario" novalidate>
+            <div class="campo">
+              <label for="custo-desc">O que você gastou</label>
+              <input id="custo-desc" type="text" maxlength="40" autocomplete="off" placeholder="Ex.: Internet ou material">
+            </div>
+            <div class="campo">
+              <label for="custo-valor">Valor (R$)</label>
+              <input id="custo-valor" type="number" min="1" max="1000" step="1" inputmode="numeric" placeholder="20">
+            </div>
+            <p class="erro" id="custo-erro" role="alert" hidden></p>
+            <button class="btn btn-contorno" type="submit">Registrar custo</button>
+          </form>
+        </div>
+      </div>
+
+      <h3 class="titulo-tabela">Registros</h3>
+      <div class="tabela-rolagem">
+        <table class="tabela" id="tabela-banco">
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Descrição</th>
+              <th scope="col" class="num">Cliente pagou</th>
+              <th scope="col" class="num">Comissão (15%)</th>
+              <th scope="col" class="num">Prestador recebeu</th>
+              <th scope="col" class="num">Custo</th>
+            </tr>
+          </thead>
+          <tbody id="banco-corpo"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparação -->
+  <section class="bloco" id="comparacao">
+    <div class="miolo">
+      <h2>Como a TempoLivre se compara</h2>
+      <p class="intro">Duas plataformas conhecidas, lado a lado, com o que cada uma pede de quem está começando.</p>
+      <div class="tabela-rolagem">
+        <table class="tabela tabela-comp">
+          <thead>
+            <tr>
+              <th scope="col"><span class="visual-oculto">Critério</span></th>
+              <th scope="col">Workana</th>
+              <th scope="col">GetNinjas</th>
+              <th scope="col" class="col-tl">TempoLivre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Para começar</th>
+              <td>Perfil em análise por até 5 dias úteis, com opção paga para acelerar</td>
+              <td>Cadastro e compra de moedas</td>
+              <td class="col-tl">Cadastro rápido e grátis, com verificação simples</td>
+            </tr>
+            <tr>
+              <th scope="row">Como acha cliente</th>
+              <td>Envia propostas, com limite semanal</td>
+              <td>Paga para liberar o contato, e vários profissionais disputam o mesmo pedido</td>
+              <td class="col-tl">O cliente escolhe no catálogo, sem leilão</td>
+            </tr>
+            <tr>
+              <th scope="row">Quando o prestador paga</th>
+              <td>Comissão de 5% a 20% sobre o projeto, mais planos opcionais</td>
+              <td>Antes, na compra das moedas</td>
+              <td class="col-tl">Só depois do serviço concluído: 15% fixos</td>
+            </tr>
+            <tr>
+              <th scope="row">Proteção do pagamento</th>
+              <td>Garantia, só dentro da plataforma</td>
+              <td>A plataforma não participa da negociação</td>
+              <td class="col-tl">Valor retido até o cliente confirmar</td>
+            </tr>
+            <tr>
+              <th scope="row">Tipo de serviço</th>
+              <td>Projetos remotos, com clientes do mundo todo</td>
+              <td>Serviços locais variados</td>
+              <td class="col-tl">Pequenos serviços da comunidade</td>
+            </tr>
+            <tr>
+              <th scope="row">Educação financeira</th>
+              <td>Não é o foco</td>
+              <td>Não é o foco</td>
+              <td class="col-tl">Banco de Talentos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="rodape-tabela">Comparação feita com as regras públicas das plataformas em outubro de 2026. Planos e regras podem mudar.</p>
+    </div>
+  </section>
+
+  <!-- Investidores -->
+  <section class="bloco" id="investidores">
+    <div class="miolo">
+      <h2>Para investidores</h2>
+      <p class="intro intro-larga">A TempoLivre pede <strong>R$ 60.000 fictícios</strong> para lançar a plataforma, conquistar os primeiros clientes e prestadores e testar o modelo em um bairro antes de expandir. Nenhum valor aqui é promessa de retorno real.</p>
+
+      <h3>Uso do investimento</h3>
+      <div class="pilha pilha-alta" id="uso-barra" role="img" aria-label="Divisão dos R$ 60.000 entre plataforma, marketing, segurança, equipamentos, capital de giro e reserva"></div>
+      <ul class="legenda legenda-uso" id="uso-legenda"></ul>
+
+      <h3>Simule o negócio</h3>
+      <p class="intro">Mexa nos controles e veja quando a empresa começa a dar lucro. A comissão é fixa em 15% e as despesas base são de R$ 7.000 por mês.</p>
+      <div class="duas-colunas duas-colunas-topo">
+        <div class="controles">
+          <div class="campo">
+            <label for="calc-servicos">Serviços concluídos por mês: <output id="calc-servicos-v">800</output></label>
+            <input id="calc-servicos" type="range" min="100" max="1500" step="10" value="800">
+          </div>
+          <div class="campo">
+            <label for="calc-ticket">Valor médio por serviço: <output id="calc-ticket-v">R$ 100,00</output></label>
+            <input id="calc-ticket" type="range" min="50" max="200" step="5" value="100">
+          </div>
+          <div class="medidor-bloco">
+            <div class="medidor" aria-hidden="true">
+              <span class="medidor-barra" id="medidor-barra"></span>
+              <span class="medidor-marca" id="medidor-marca"></span>
+            </div>
+            <span class="medidor-rotulo" id="medidor-rotulo"></span>
+          </div>
+        </div>
+        <div>
+          <dl class="fechamento" aria-live="polite">
+            <div class="fila"><dt>Volume contratado</dt><dd id="c-volume"></dd></div>
+            <div class="fila"><dt>Receita da TempoLivre (15%)</dt><dd id="c-receita"></dd></div>
+            <div class="fila"><dt>Despesas base</dt><dd id="c-despesas"></dd></div>
+            <div class="fila fila-destaque"><dt>Lucro operacional</dt><dd id="c-lucro"></dd></div>
+            <div class="fila"><dt>Margem de lucro</dt><dd id="c-margem"></dd></div>
+            <div class="fila"><dt>Ponto de equilíbrio</dt><dd id="c-pe"></dd></div>
+          </dl>
+          <p class="status" id="c-status"></p>
+        </div>
+      </div>
+
+      <h3>O primeiro ano</h3>
+      <p class="intro">Simulação de 12 meses com os números do projeto. No cenário esperado, a procura cresce rápido graças aos cadastros feitos antes do lançamento. No cauteloso, ela cresce mais devagar.</p>
+      <div class="filtros" role="group" aria-label="Escolher cenário">
+        <button class="chip" type="button" data-cenario="esperado" aria-pressed="true">Cenário esperado</button>
+        <button class="chip" type="button" data-cenario="cauteloso" aria-pressed="false">Cenário cauteloso</button>
+      </div>
+      <div class="kpis kpis-ano" id="ano-kpis" aria-live="polite"></div>
+      <div class="grafico-rolagem">
+        <svg id="grafico-ano" class="grafico" viewBox="0 0 720 320" role="img"></svg>
+      </div>
+      <ul class="legenda legenda-linha">
+        <li><span class="amostra amostra-acima"></span>Receita acima das despesas</li>
+        <li><span class="amostra amostra-abaixo"></span>Receita abaixo das despesas</li>
+        <li><span class="amostra amostra-linha"></span>Despesas do mês</li>
+      </ul>
+      <p class="leitura" id="ano-leitura"></p>
+
+      <h3>Riscos e como reduzimos</h3>
+      <div class="riscos" id="lista-riscos"></div>
+    </div>
+  </section>
+
+  <!-- Impacto -->
+  <section class="bloco" id="impacto">
+    <div class="miolo">
+      <h2>Impacto na comunidade</h2>
+      <ul class="impacto">
+        <li><strong>Renda e autonomia.</strong> Jovens e iniciantes ganham o primeiro dinheiro com o que já sabem, sem pagar para começar.</li>
+        <li><strong>Educação financeira.</strong> O Banco de Talentos mostra ganhos, custos e renda líquida, e ajuda a decidir quanto guardar e quanto reinvestir.</li>
+        <li><strong>Economia local.</strong> O dinheiro circula na própria comunidade, e famílias e pequenos negócios encontram serviços acessíveis perto de casa.</li>
+        <li><strong>Menos deslocamento.</strong> A maior parte dos serviços iniciais é digital: aulas, vídeos e apresentações.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="miolo">
+    <p>TempoLivre é um projeto fictício criado para a Feira de Ciências. Todo o dinheiro é fictício e nenhuma movimentação financeira real acontece. Perfis, preços e avaliações são de exemplo.</p>
+    <p>A comparação usa as regras públicas da Workana e do GetNinjas em outubro de 2026, que podem mudar.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-titulo">
+  <div class="dlg-corpo" id="dlg-corpo"></div>
+</dialog>
+
+<script src="script.js" defer></script>
+</body>
+</html>
